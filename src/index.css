@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+
+    --primary: 164 76% 21%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 42 55% 58%;
+    --secondary-foreground: 222 84% 4.9%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 42 55% 58%;
+    --accent-foreground: 222 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 164 76% 21%;
+
+    --radius: 0.75rem;
+
+    /* Enhanced Islamic Design Tokens */
+    --emerald-deep: 164 76% 21%;
+    --emerald-light: 164 50% 35%;
+    --gold: 42 55% 58%;
+    --gold-light: 42 60% 75%;
+    --gold-dark: 42 50% 45%;
+    --cream: 45 30% 97%;
+    --cream-dark: 45 25% 92%;
+    --navy: 200 50% 12%;
+    --teal: 174 72% 56%;
+    --sage: 120 20% 70%;
+
+    /* Enhanced Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(164 76% 21%) 0%, hsl(164 50% 28%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 55% 58%) 0%, hsl(42 65% 45%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(164 76% 21% / 0.95) 0%, hsl(164 50% 15% / 0.98) 100%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(164 76% 10% / 0.7) 100%);
+    --gradient-islamic: linear-gradient(135deg, hsl(164 76% 21%) 0%, hsl(174 72% 56%) 50%, hsl(42 55% 58%) 100%);
+
+    /* Enhanced Shadows */
+    --shadow-sm: 0 2px 8px hsl(160 40% 10% / 0.08);
+    --shadow-md: 0 8px 24px hsl(160 40% 10% / 0.12);
+    --shadow-lg: 0 16px 48px hsl(160 40% 10% / 0.16);
+    --shadow-xl: 0 24px 64px hsl(160 40% 10% / 0.20);
+    --shadow-gold: 0 4px 20px hsl(42 55% 58% / 0.3);
+    --shadow-emerald: 0 4px 20px hsl(164 76% 21% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 200 50% 8%;
+    --foreground: 45 30% 95%;
+
+    --card: 200 45% 12%;
+    --card-foreground: 45 30% 95%;
+
+    --popover: 200 50% 10%;
+    --popover-foreground: 45 30% 95%;
+
+    --primary: 42 55% 58%;
+    --primary-foreground: 200 50% 8%;
+
+    --secondary: 164 50% 25%;
+    --secondary-foreground: 45 30% 95%;
+
+    --muted: 200 40% 15%;
+    --muted-foreground: 45 20% 70%;
+
+    --accent: 164 50% 25%;
+    --accent-foreground: 45 30% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 30% 20%;
+    --input: 200 30% 20%;
+    --ring: 42 55% 58%;
+
+    --gradient-hero: linear-gradient(180deg, hsl(200 50% 6% / 0.98) 0%, hsl(164 40% 8% / 0.95) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground antialiased min-h-screen;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(135deg, 
+      #f8fafc 0%,
+      #f1f5f9 25%, 
+      #e2e8f0 50%,
+      #f0f9ff 75%,
+      #ecfdf5 100%
+    );
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-semibold tracking-tight;
+  }
+
+  .font-arabic {
+    font-family: 'Scheherazade New', 'Amiri', serif;
+    direction: rtl;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  /* Enhanced Islamic Patterns */
+  .islamic-pattern {
+    background-image: 
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a853' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg width='100' height='60' viewBox='0 0 100 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232d5a3d' fill-opacity='0.03'%3E%3Cpath d='M20 50 L20 35 Q20 30 25 30 L35 30 Q40 30 40 35 L40 50 Z M40 50 L40 25 Q40 20 45 20 L65 20 Q70 20 70 25 L70 50 Z M70 50 L70 35 Q70 30 75 30 L85 30 Q90 30 90 35 L90 50 Z'/%3E%3Cellipse cx='55' cy='20' rx='15' ry='8' /%3E%3Crect x='25' y='10' width='4' height='20' /%3E%3Crect x='75' y='10' width='4' height='20' /%3E%3Cellipse cx='27' cy='10' rx='3' ry='4' /%3E%3Cellipse cx='77' cy='10' rx='3' ry='4' /%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .islamic-pattern-dense {
+    background-image: 
+      url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4a853' fill-opacity='0.06'%3E%3Cpath d='M20 20.5V18H18v2.5h-2.5V23H18v2.5h2V23h2.5v-2.5H20zm0-10V8H18v2.5h-2.5V13H18v2.5h2V13h2.5v-2.5H20zm-10 0V8H8v2.5H5.5V13H8v2.5h2V13h2.5v-2.5H10zm20 0V8H28v2.5h-2.5V13H28v2.5h2V13h2.5v-2.5H30zm-10 10V18H18v2.5h-2.5V23H18v2.5h2V23h2.5v-2.5H20zm10 0V18H28v2.5h-2.5V23H28v2.5h2V23h2.5v-2.5H30zm-20 0V18H8v2.5H5.5V23H8v2.5h2V23h2.5v-2.5H10zm10 10V28H18v2.5h-2.5V33H18v2.5h2V33h2.5v-2.5H20zm10 0V28H28v2.5h-2.5V33H28v2.5h2V33h2.5v-2.5H30zm-20 0V28H8v2.5H5.5V33H8v2.5h2V33h2.5v-2.5H10z'/%3E%3C/g%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg width='80' height='48' viewBox='0 0 80 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232d5a3d' fill-opacity='0.04'%3E%3Cpath d='M15 40 L15 28 Q15 25 18 25 L27 25 Q30 25 30 28 L30 40 Z M30 40 L30 20 Q30 17 33 17 L47 17 Q50 17 50 20 L50 40 Z M50 40 L50 28 Q50 25 53 25 L62 25 Q65 25 65 28 L65 40 Z'/%3E%3Cellipse cx='40' cy='17' rx='12' ry='6' /%3E%3Crect x='20' y='8' width='3' height='17' /%3E%3Crect x='57' y='8' width='3' height='17' /%3E%3Cellipse cx='21.5' cy='8' rx='2.5' ry='3' /%3E%3Cellipse cx='58.5' cy='8' rx='2.5' ry='3' /%3E%3Cpath d='M21.5 5 Q20.5 3 21.5 1 Q22.5 2.5 21.5 5' /%3E%3Cpath d='M58.5 5 Q57.5 3 58.5 1 Q59.5 2.5 58.5 5' /%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .geometric-border {
+    border-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--gold)) 20%,
+      hsl(var(--gold)) 80%,
+      transparent 100%
+    ) 1;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(42 55% 58%) 0%, hsl(42 70% 50%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-emerald {
+    background: linear-gradient(135deg, hsl(164 76% 21%) 0%, hsl(174 72% 56%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .card-hover:hover {
+    @apply -translate-y-2;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .islamic-card {
+    @apply bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm border border-gold/20 shadow-lg;
+  }
+
+  /* Enhanced Button Variants */
+  .btn-islamic {
+    @apply bg-gradient-to-r from-emerald-600 to-teal-600 text-white hover:from-emerald-700 hover:to-teal-700 shadow-emerald transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-gold {
+    @apply bg-gradient-to-r from-yellow-500 to-amber-600 text-white hover:from-yellow-600 hover:to-amber-700 shadow-gold transition-all duration-300 transform hover:scale-105;
+  }
+
+  /* Modern Card Styles */
+  .modern-card {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2;
+  }
+
+  /* Glassmorphism Effect */
+  .glass-modern {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.1)
+    );
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Animated Gradient Text */
+  .gradient-text {
+    background: linear-gradient(
+      45deg,
+      #059669,
+      #0891b2,
+      #7c3aed,
+      #dc2626,
+      #059669
+    );
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientText 8s ease infinite;
+  }
+
+  @keyframes gradientText {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  /* Floating Animation Variants */
+  .float-slow {
+    animation: floatSlow 8s ease-in-out infinite;
+  }
+
+  .float-reverse {
+    animation: floatReverse 6s ease-in-out infinite;
+  }
+
+  @keyframes floatSlow {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+  }
+
+  @keyframes floatReverse {
+    0%, 100% { transform: translateY(-10px) rotate(-2deg); }
+    50% { transform: translateY(10px) rotate(2deg); }
+  }
+
+  /* Modern Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply transform -translate-y-2 shadow-2xl;
+  }
+
+  /* Pulse Animation */
+  .pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { 
+      box-shadow: 0 0 20px rgba(5, 150, 105, 0.3);
+      transform: scale(1);
+    }
+    50% { 
+      box-shadow: 0 0 40px rgba(5, 150, 105, 0.6);
+      transform: scale(1.02);
+    }
+  }
+}
+
+@layer utilities {
+  /* Enhanced Animations */
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.8s ease-out forwards;
+  }
+
+  .animate-slide-left {
+    animation: slideLeft 0.8s ease-out forwards;
+  }
+
+  .animate-slide-right {
+    animation: slideRight 0.8s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 3s linear infinite;
+  }
+
+  /* Gradient Text Utilities */
+  .text-gold {
+    color: hsl(var(--gold));
+  }
+
+  .text-gold-light {
+    color: hsl(var(--gold-light));
+  }
+
+  .text-emerald-deep {
+    color: hsl(var(--emerald-deep));
+  }
+
+  .bg-gold {
+    background-color: hsl(var(--gold));
+  }
+
+  .bg-emerald-deep {
+    background-color: hsl(var(--emerald-deep));
+  }
+
+  /* Enhanced Keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  /* Responsive Islamic Typography */
+  .text-arabic-lg {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+
+  .text-arabic-xl {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  /* Islamic Color Utilities */
+  .from-emerald-50 { --tw-gradient-from: #ecfdf5; }
+  .to-gold-50 { --tw-gradient-to: #fffbeb; }
+  .from-purple-50 { --tw-gradient-from: #faf5ff; }
+  .to-indigo-50 { --tw-gradient-to: #eef2ff; }
+  .from-green-50 { --tw-gradient-from: #f0fdf4; }
+  .to-emerald-50 { --tw-gradient-to: #ecfdf5; }
+  .from-blue-50 { --tw-gradient-from: #eff6ff; }
+  .to-indigo-50 { --tw-gradient-to: #eef2ff; }
+
+  /* Mosque Silhouette Animation */
+  .mosque-silhouette {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  }
+
+  /* Islamic Geometric Borders */
+  .islamic-border {
+    border-image: linear-gradient(
+      45deg,
+      hsl(var(--gold)) 0%,
+      hsl(var(--emerald-deep)) 25%,
+      hsl(var(--gold)) 50%,
+      hsl(var(--emerald-deep)) 75%,
+      hsl(var(--gold)) 100%
+    ) 1;
+  }
+
+  /* Enhanced Glass Effect */
+  .glass-islamic {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    );
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Crescent Moon Shape */
+  .crescent-moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 6px 0 0 0 hsl(var(--gold));
+    background: transparent;
+  }
+
+  /* Star of David / Islamic Star */
+  .islamic-star {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid hsl(var(--gold));
+    transform: rotate(35deg);
+  }
+
+  .islamic-star:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 3px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid hsl(var(--gold));
+    transform: rotate(-70deg);
+  }
+
+  .islamic-star:after {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 3px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid hsl(var(--gold));
+    transform: rotate(70deg);
+  }
+}
