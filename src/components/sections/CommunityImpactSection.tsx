@@ -72,12 +72,12 @@ const achievements = [
     description: "Students and community members helped over the decades"
   },
   {
-    number: "₹2M+",
+    number: "2M+",
     label: "Aid Distributed",
     description: "Financial assistance provided to students in need"
   },
   {
-    number: "500+",
+    number: "50000+",
     label: "Graduates Supported",
     description: "Alumni who received support during their studies"
   }

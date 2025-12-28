@@ -42,8 +42,8 @@ const activities = [
 ];
 
 const stats = [
-  { number: "500+", label: "Active Members", icon: Users },
-  { number: "15+", label: "Years of Service", icon: Award },
+  { number: "2000+", label: "Active Members", icon: Users },
+  { number: "35+", label: "Years of Service", icon: Award },
   { number: "50+", label: "Annual Events", icon: Star },
   { number: "100%", label: "Commitment", icon: Target },
 ];

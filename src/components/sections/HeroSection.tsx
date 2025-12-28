@@ -110,7 +110,7 @@ export function HeroSection() {
           <h1 className="font-display text-6xl md:text-8xl lg:text-9xl text-white font-bold animate-slide-up drop-shadow-2xl">
             Haramaya University
             <span className="block bg-gradient-to-r from-gold via-amber-400 to-yellow-500 bg-clip-text text-transparent mt-4 text-5xl md:text-7xl lg:text-8xl">
-              Muslim Students Jama'a
+              Muslim Students Jema'a
             </span>
           </h1>
           
@@ -133,7 +133,7 @@ export function HeroSection() {
         <div className="flex flex-wrap justify-center gap-6 mb-14 animate-slide-up" style={{ animationDelay: "0.3s" }}>
           <div className="text-center bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-emerald-300/30 shadow-xl min-w-[140px]">
             <div className="text-3xl mb-2">🕌</div>
-            <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-300 to-teal-300 bg-clip-text text-transparent">600+</p>
+            <p className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-300 to-teal-300 bg-clip-text text-transparent">2000+</p>
             <p className="text-emerald-200 text-sm font-medium">Active Members</p>
           </div>
           <div className="text-center bg-gradient-to-br from-white/15 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-blue-300/30 shadow-xl min-w-[140px]">

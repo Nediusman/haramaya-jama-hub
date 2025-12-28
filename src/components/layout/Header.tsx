@@ -47,7 +47,7 @@ export function Header() {
                 HUMSJ
               </h1>
               <p className="text-sm font-medium text-emerald-200">
-                Muslim Students Jama'a
+                Muslim Students Jema'a
               </p>
               <p className="text-xs text-emerald-300/80">
                 Since 1990 • جماعة الطلاب المسلمين
